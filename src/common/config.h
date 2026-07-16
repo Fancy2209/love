@@ -166,7 +166,9 @@
 #	define LOVE_ENABLE_WINDOW
 
 #	define LOVE_ENABLE_ENET
+#if !defined(LOVE_VITA)
 #	define LOVE_ENABLE_LUASOCKET
+#endif
 #	define LOVE_ENABLE_LUA53
 #endif
 

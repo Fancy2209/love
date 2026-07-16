@@ -214,7 +214,12 @@ Please see https://github.com/love2d/megasource
 
 	if(VITA)
 		set(LOVE_LINK_LIBRARIES
+			-Wl,--whole-archive pthread -Wl,--no-whole-archive
 			vitaGL
+			vitashark
+			SceShaccCgExt
+			taihen_stub
+			SceShaccCg_stub
 			stdc++
 			${SDL2_LIBRARIES}
 			${FREETYPE_LIBRARY}
@@ -223,9 +228,34 @@ Please see https://github.com/love2d/megasource
 			${THEORA_LIBRARY}
 			${THEORADEC_LIBRARY}
 			${VORBISFILE_LIBRARY}
+			vorbis
 			${LOVE_LUA_LIBRARY}
 			${OGG_LIBRARY}
 			${ZLIB_LIBRARY}
+			png
+			bz2
+			ScePgf_stub
+			mathneon
+			kubridge_stub
+			SceHid_stub
+			SceTouch_stub
+			SceMotion_stub
+			SceAppMgr_stub
+			SceAppUtil_stub
+			SceAudio_stub
+			SceAudioIn_stub
+			SceCommonDialog_stub
+			SceSysmodule_stub
+			SceNpTrophy_stub
+			SceDisplay_stub
+			SceKernelDmacMgr_stub
+			SceSblSsMgr_stub
+			SceFios2_stub
+			SceCtrl_stub
+			SceGxm_stub
+			ScePower_stub
+			SceTouch_stub
+			SceVshBridge_stub
 		)
 	else()
 		set(LOVE_LINK_LIBRARIES
@@ -258,6 +288,9 @@ Please see https://github.com/love2d/megasource
 	if(LOVE_JIT)
 		find_package(LuaJIT REQUIRED)
 		set(LOVE_LUA_LIBRARY ${LUAJIT_LIBRARY})
+		if(VITA)
+			set(LOVE_LUA_LIBRARY ${LOVE_LUA_LIBRARY} dl taihen_stub SceSblSsMgr_stub)
+		endif()
 		set(LOVE_LUA_INCLUDE_DIR ${LUAJIT_INCLUDE_DIR})
 	else()
 		find_package(Lua51 REQUIRED)

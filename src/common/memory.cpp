@@ -28,6 +28,9 @@
 #include <malloc.h>
 #include <Windows.h>
 #else
+#ifdef LOVE_VITA
+#include <malloc.h>
+#endif
 #include <unistd.h> // Assume POSIX support.
 #endif
 
@@ -38,6 +41,9 @@ bool alignedMalloc(void **mem, size_t size, size_t alignment)
 {
 #ifdef LOVE_WINDOWS
 	*mem = _aligned_malloc(size, alignment);
+	return *mem != nullptr;
+#elif defined(LOVE_VITA)
+	*mem = memalign(alignment, size);
 	return *mem != nullptr;
 #else
 	return posix_memalign(mem, alignment, size) == 0;
