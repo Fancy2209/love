@@ -480,6 +480,8 @@ int luaopen_love(lua_State *L)
 	lua_pushstring(L, "Android");
 #elif defined(LOVE_LINUX)
 	lua_pushstring(L, "Linux");
+#elif defined(LOVE_VITA)
+	lua_pushstring(L, "PSVita");
 #else
 	lua_pushstring(L, "Unknown");
 #endif

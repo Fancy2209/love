@@ -318,7 +318,7 @@ static PHYSFS_Io *memoryIo_duplicate(PHYSFS_Io *io)
         BAIL(PHYSFS_ERR_OUT_OF_MEMORY, NULL);
     } /* if */
 
-    __PHYSFS_ATOMIC_INCR(&info->refcount);
+    (void) __PHYSFS_ATOMIC_INCR(&info->refcount);
 
     memset(newinfo, '\0', sizeof (*info));
     newinfo->buf = info->buf;
@@ -1106,7 +1106,7 @@ static char *calculateBaseDir(const char *argv0)
 {
     const char dirsep = __PHYSFS_platformDirSeparator;
     char *retval = NULL;
-    char *ptr = NULL;
+    const char *ptr = NULL;
 
     /* Give the platform layer first shot at this. */
     retval = __PHYSFS_platformCalcBaseDir(argv0);
@@ -1179,6 +1179,9 @@ static int initStaticArchivers(void)
     #if PHYSFS_SUPPORTS_QPAK
         REGISTER_STATIC_ARCHIVER(QPAK);
     #endif
+    #if PHYSFS_SUPPORTS_ROFS
+        REGISTER_STATIC_ARCHIVER(ROFS);
+    #endif
     #if PHYSFS_SUPPORTS_HOG
         REGISTER_STATIC_ARCHIVER(HOG);
     #endif
@@ -1188,6 +1191,9 @@ static int initStaticArchivers(void)
     #if PHYSFS_SUPPORTS_WAD
         REGISTER_STATIC_ARCHIVER(WAD);
     #endif
+    #if PHYSFS_SUPPORTS_CSM
+        REGISTER_STATIC_ARCHIVER(CSM);
+    #endif
     #if PHYSFS_SUPPORTS_SLB
         REGISTER_STATIC_ARCHIVER(SLB);
     #endif
@@ -1196,6 +1202,14 @@ static int initStaticArchivers(void)
     #endif
     #if PHYSFS_SUPPORTS_VDF
         REGISTER_STATIC_ARCHIVER(VDF)
+    #endif
+    #if PHYSFS_SUPPORTS_LECARCHIVES
+        REGISTER_STATIC_ARCHIVER(GOB)
+        REGISTER_STATIC_ARCHIVER(LFD)
+        REGISTER_STATIC_ARCHIVER(LAB)
+    #endif
+    #if PHYSFS_SUPPORTS_POD
+        REGISTER_STATIC_ARCHIVER(POD)
     #endif
 
     #undef REGISTER_STATIC_ARCHIVER
@@ -1216,7 +1230,7 @@ int PHYSFS_init(const char *argv0)
 
     if ((allocator.Init != NULL) && (!allocator.Init())) return 0;
 
-    if (!__PHYSFS_platformInit())
+    if (!__PHYSFS_platformInit(argv0))
     {
         if (allocator.Deinit != NULL) allocator.Deinit();
         return 0;
@@ -3191,7 +3205,12 @@ int PHYSFS_stat(const char *_fname, PHYSFS_Stat *stat)
 int __PHYSFS_readAll(PHYSFS_Io *io, void *buf, const size_t _len)
 {
     const PHYSFS_uint64 len = (PHYSFS_uint64) _len;
-    return (io->read(io, buf, len) == len);
+    PHYSFS_sint64 amount_read = io->read(io, buf, len);
+    if (amount_read < 0)
+    {
+        return 0;
+    }
+    return ((PHYSFS_uint64)amount_read == len);
 } /* __PHYSFS_readAll */
 
 
@@ -3245,6 +3264,7 @@ const PHYSFS_Allocator *PHYSFS_getAllocator(void)
 } /* PHYSFS_getAllocator */
 
 
+#ifndef PHYSFS_NO_CRUNTIME_MALLOC
 static void *mallocAllocatorMalloc(PHYSFS_uint64 s)
 {
     if (!__PHYSFS_ui64FitsAddressSpace(s))
@@ -3268,16 +3288,18 @@ static void mallocAllocatorFree(void *ptr)
     #undef free
     free(ptr);
 } /* mallocAllocatorFree */
-
+#endif
 
 static void setDefaultAllocator(void)
 {
     assert(!externalAllocator);
     allocator.Init = NULL;
     allocator.Deinit = NULL;
+    #ifndef PHYSFS_NO_CRUNTIME_MALLOC
     allocator.Malloc = mallocAllocatorMalloc;
     allocator.Realloc = mallocAllocatorRealloc;
     allocator.Free = mallocAllocatorFree;
+    #endif
 } /* setDefaultAllocator */
 
 

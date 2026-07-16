@@ -76,6 +76,8 @@ std::string System::getOS() const
 	return "Android";
 #elif defined(LOVE_LINUX)
 	return "Linux";
+#elif defined(LOVE_VITA)
+	return "PSVita";
 #else
 	return "Unknown";
 #endif
@@ -91,7 +93,10 @@ extern "C"
 bool System::openURL(const std::string &url) const
 {
 
-#if defined(LOVE_MACOSX)
+#if defined(LOVE_VITA)
+	return true;
+
+#elif defined(LOVE_MACOSX)
 
 	bool success = false;
 	CFURLRef cfurl = CFURLCreateWithBytes(nullptr,

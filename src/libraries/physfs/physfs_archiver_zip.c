@@ -13,7 +13,6 @@
 #if PHYSFS_SUPPORTS_ZIP
 
 #include <errno.h>
-#include <time.h>
 
 #if (PHYSFS_BYTEORDER == PHYSFS_LIL_ENDIAN)
 #define MINIZ_LITTLE_ENDIAN 1
@@ -124,7 +123,7 @@ typedef struct
 #define ZIP_GENERAL_BITS_IGNORE_LOCAL_HEADER  (1 << 3)
 
 /* support for "traditional" PKWARE encryption. */
-static int zip_entry_is_tradional_crypto(const ZIPentry *entry)
+static int zip_entry_is_traditional_crypto(const ZIPentry *entry)
 {
     return (entry->general_bits & ZIP_GENERAL_BITS_TRADITIONAL_CRYPTO) != 0;
 } /* zip_entry_is_traditional_crypto */
@@ -162,8 +161,8 @@ static PHYSFS_sint64 zip_read_decrypt(ZIPfileinfo *finfo, void *buf, PHYSFS_uint
     PHYSFS_Io *io = finfo->io;
     const PHYSFS_sint64 br = io->read(io, buf, len);
 
-    /* Decompression the new data if necessary. */
-    if (zip_entry_is_tradional_crypto(finfo->entry) && (br > 0))
+    /* Decompress the new data if necessary. */
+    if (zip_entry_is_traditional_crypto(finfo->entry) && (br > 0))
     {
         PHYSFS_uint32 *keys = finfo->crypto_keys;
         PHYSFS_uint8 *ptr = (PHYSFS_uint8 *) buf;
@@ -382,7 +381,7 @@ static int ZIP_seek(PHYSFS_Io *_io, PHYSFS_uint64 offset)
     ZIPfileinfo *finfo = (ZIPfileinfo *) _io->opaque;
     ZIPentry *entry = finfo->entry;
     PHYSFS_Io *io = finfo->io;
-    const int encrypted = zip_entry_is_tradional_crypto(entry);
+    const int encrypted = zip_entry_is_traditional_crypto(entry);
 
     BAIL_IF(offset > entry->uncompressed_size, PHYSFS_ERR_PAST_EOF, 0);
 
@@ -553,7 +552,7 @@ static PHYSFS_sint64 zip_find_end_of_central_dir(PHYSFS_Io *io, PHYSFS_sint64 *l
      *  and call it a corrupted zipfile.
      */
 
-    if (sizeof (buf) < filelen)
+    if (sizeof (buf) < (PHYSFS_uint64)filelen)
     {
         filepos = filelen - sizeof (buf);
         maxread = sizeof (buf);
@@ -969,27 +968,24 @@ static inline int zip_has_symlink_attr(const ZIPentry *entry,
 
 static PHYSFS_sint64 zip_dos_time_to_physfs_time(PHYSFS_uint32 dostime)
 {
-    PHYSFS_uint32 dosdate;
-    struct tm unixtime;
-    memset(&unixtime, '\0', sizeof (unixtime));
+    const PHYSFS_uint32 dosdate = (PHYSFS_uint32) ((dostime >> 16) & 0xFFFF);
+    const PHYSFS_uint32 dostime16 = dostime & 0xFFFF;
 
-    dosdate = (PHYSFS_uint32) ((dostime >> 16) & 0xFFFF);
-    dostime &= 0xFFFF;
+    const int m = (int) ((dosdate >> 5) & 0x0F);
+    const int d = (int) ((dosdate >> 0) & 0x1F) + 1;
+    const int y = (int) (((dosdate >> 9) & 0x7F) + 1980) - (m <= 2 ? 1 : 0);
+    const int hour   = (int) ((dostime16 >> 11) & 0x1F);
+    const int minute = (int) ((dostime16 >>  5) & 0x3F);
+    const int sec    = (int) ((dostime16 <<  1) & 0x3E);
 
-    /* dissect date */
-    unixtime.tm_year = ((dosdate >> 9) & 0x7F) + 80;
-    unixtime.tm_mon  = ((dosdate >> 5) & 0x0F) - 1;
-    unixtime.tm_mday = ((dosdate     ) & 0x1F);
-
-    /* dissect time */
-    unixtime.tm_hour = ((dostime >> 11) & 0x1F);
-    unixtime.tm_min  = ((dostime >>  5) & 0x3F);
-    unixtime.tm_sec  = ((dostime <<  1) & 0x3E);
-
-    /* let mktime calculate daylight savings time. */
-    unixtime.tm_isdst = -1;
-
-    return ((PHYSFS_sint64) mktime(&unixtime));
+    // days since 1/1/1970: https://howardhinnant.github.io/date_algorithms.html#days_from_civil
+    const int era = ((y >= 0) ? y : (y - 399)) / 400;
+    const unsigned int yoe = (unsigned int) (y - era * 400);      // [0, 399]
+    const unsigned int doy = (((153 * ((m > 2) ? (m - 3) : (m + 9))) + 2) / 5) + (d - 1);  // [0, 365]
+    const unsigned int doe = (yoe * 365) + (yoe / 4) - (yoe / 100) + doy;         // [0, 146096]
+    const int days = (era * 146097) + ((int) doe) - 719468;
+    const int seconds = (hour * (60 * 60)) + (minute * 60) + (sec);
+    return (((PHYSFS_sint64) days) * 86400) + seconds;
 } /* zip_dos_time_to_physfs_time */
 
 
@@ -1021,7 +1017,7 @@ static ZIPentry *zip_load_entry(ZIPinfo *info, const int zip64,
     BAIL_IF_ERRPASS(!readui16(io, &entry.general_bits), NULL);  /* general bits */
     BAIL_IF_ERRPASS(!readui16(io, &entry.compression_method), NULL);
     BAIL_IF_ERRPASS(!readui32(io, &entry.dos_mod_time), NULL);
-    entry.last_mod_time = zip_dos_time_to_physfs_time(entry.dos_mod_time);
+    entry.last_mod_time = zip_dos_time_to_physfs_time(entry.dos_mod_time);  /* !!! FIXME: there are extended fields that can get you off gross old DOS time format. */
     BAIL_IF_ERRPASS(!readui32(io, &entry.crc), NULL);
     BAIL_IF_ERRPASS(!readui32(io, &ui32), NULL);
     entry.compressed_size = (PHYSFS_uint64) ui32;
@@ -1096,6 +1092,7 @@ static ZIPentry *zip_load_entry(ZIPinfo *info, const int zip64,
         {
             BAIL_IF_ERRPASS(!readui16(io, &sig), NULL);
             BAIL_IF_ERRPASS(!readui16(io, &len), NULL);
+            BAIL_IF(extralen < (4 + len), PHYSFS_ERR_CORRUPT, NULL);
 
             si64 += 4 + len;
             extralen -= 4 + len;
@@ -1169,7 +1166,7 @@ static int zip_load_entries(ZIPinfo *info,
     {
         ZIPentry *entry = zip_load_entry(info, zip64, data_ofs);
         BAIL_IF_ERRPASS(!entry, 0);
-        if (zip_entry_is_tradional_crypto(entry))
+        if (zip_entry_is_traditional_crypto(entry))
             info->has_crypto = 1;
     } /* for */
 
@@ -1590,7 +1587,7 @@ static PHYSFS_Io *ZIP_openRead(void *opaque, const char *filename)
             goto ZIP_openRead_failed;
     } /* if */
 
-    if (!zip_entry_is_tradional_crypto(entry))
+    if (!zip_entry_is_traditional_crypto(entry))
         GOTO_IF(password != NULL, PHYSFS_ERR_BAD_PASSWORD, ZIP_openRead_failed);
     else
     {

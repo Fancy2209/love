@@ -33,7 +33,7 @@
 #elif defined(LOVE_WINDOWS)
 #include <windows.h>
 #include "common/utf8.h"
-#elif defined(LOVE_LINUX)
+#elif defined(LOVE_LINUX) || defined(LOVE_VITA)
 #include <unistd.h>
 #endif
 
@@ -114,6 +114,10 @@ std::string Filesystem::getExecutablePath() const
 		return "";
 
 	return std::string(buffer, len);
+
+#elif defined(LOVE_VITA)
+
+	return std::string("app0:eboot.bin", strlen("app0:eboot.bin"));
 
 #else
 #error Missing implementation for Filesystem::getExecutablePath!

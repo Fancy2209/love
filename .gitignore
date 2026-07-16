@@ -49,6 +49,7 @@ libtool
 /platform/unix/love.desktop
 /platform/unix/ltmain.sh
 /platform/unix/missing
+build/
 .lineno
 *.la
 *.Tpo

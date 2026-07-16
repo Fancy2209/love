@@ -11,6 +11,8 @@
 
 #ifdef PHYSFS_PLATFORM_WINDOWS
 
+typedef void (*fnFunctionPointer)(void);
+
 /* Forcibly disable UNICODE macro, since we manage this ourselves. */
 #ifdef UNICODE
 #undef UNICODE
@@ -123,7 +125,7 @@ static inline HANDLE winCreateFileW(const WCHAR *wfname, const DWORD mode,
                                     const DWORD creation)
 {
     const DWORD share = FILE_SHARE_READ | FILE_SHARE_WRITE;
-    #if defined(PHYSFS_PLATFORM_WINRT) /*|| (_WIN32_WINNT >= 0x0602)*/ // Windows 8+
+    #if defined(PHYSFS_PLATFORM_WINRT) // also available if targeting Windows 8+ || (_WIN32_WINNT >= 0x0602) - but do not include this for now, due to common toolchain defaults
     return CreateFile2(wfname, mode, share, creation, NULL);
     #else
     return CreateFileW(wfname, mode, share, NULL, creation,
@@ -249,7 +251,7 @@ static DWORD pollDiscDrives(void)
     DWORD i;
 
     if (lib)
-        stem = (fnSTEM) GetProcAddress(lib, "SetThreadErrorMode");
+        stem = (fnSTEM)(fnFunctionPointer) GetProcAddress(lib, "SetThreadErrorMode");
 
     if (stem)
         stem(SEM_FAILCRITICALERRORS, &oldErrorMode);
@@ -558,7 +560,7 @@ char *__PHYSFS_platformCalcUserDir(void)
 
     lib = LoadLibraryA("userenv.dll");
     BAIL_IF(!lib, errcodeFromWinApi(), NULL);
-    pGetDir=(fnGetUserProfDirW) GetProcAddress(lib,"GetUserProfileDirectoryW");
+    pGetDir=(fnGetUserProfDirW)(fnFunctionPointer) GetProcAddress(lib,"GetUserProfileDirectoryW");
     GOTO_IF(!pGetDir, errcodeFromWinApi(), done);
 
     if (!OpenProcessToken(GetCurrentProcess(), TOKEN_QUERY, &accessToken))
@@ -613,7 +615,7 @@ done:
 } /* __PHYSFS_platformCalcUserDir */
 
 
-int __PHYSFS_platformInit(void)
+int __PHYSFS_platformInit(const char *argv0)
 {
     return 1;  /* It's all good */
 } /* __PHYSFS_platformInit */

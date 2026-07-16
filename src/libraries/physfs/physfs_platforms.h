@@ -12,7 +12,21 @@
  *  PHYSFS_PLATFORM_UNIX on that system.
  */
 
-#if (defined __HAIKU__)
+#if defined(PHYSFS_PLATFORM_SDL3)
+#define PHYSFS_NO_CDROM_SUPPORT 1
+#elif defined(TARGET_EXTENSION) && (defined(TARGET_PLAYDATE) || defined(TARGET_SIMULATOR))
+#  define PHYSFS_PLATFORM_PLAYDATE 1
+#  define PHYSFS_NO_CRUNTIME_MALLOC 1
+#elif (defined __EMSCRIPTEN__)
+#  define PHYSFS_PLATFORM_EMSCRIPTEN 1
+#  define PHYSFS_PLATFORM_POSIX 1
+#elif (defined DJGPP)
+#  define PHYSFS_PLATFORM_DOS 1
+#  define PHYSFS_PLATFORM_POSIX 1  /* close enough with djgpp */
+#elif (defined __LIBRETRO__)
+#  define PHYSFS_PLATFORM_LIBRETRO 1
+#  define PHYSFS_NO_CDROM_SUPPORT 1
+#elif (defined __HAIKU__)
 #  define PHYSFS_PLATFORM_HAIKU 1
 #  define PHYSFS_PLATFORM_POSIX 1
 #elif ((defined __BEOS__) || (defined __beos__))
@@ -72,6 +86,18 @@
 #elif defined(unix) || defined(__unix__)
 #  define PHYSFS_PLATFORM_UNIX 1
 #  define PHYSFS_PLATFORM_POSIX 1
+#elif defined(__wii__) || defined(__gamecube__)
+#  define PHYSFS_PLATFORM_OGC 1
+#  define PHYSFS_NO_CDROM_SUPPORT 1 // TODO
+#elif defined(__3DS__)
+#  define PHYSFS_PLATFORM_CTR 1
+#  define PHYSFS_NO_CDROM_SUPPORT 1
+#elif defined(__WIIU__)
+#  define PHYSFS_PLATFORM_CAFE 1
+#  define PHYSFS_NO_CDROM_SUPPORT 1
+#elif defined(__vita__)
+#  define PHYSFS_PLATFORM_VITA 1
+#  define PHYSFS_NO_CDROM_SUPPORT 1
 #else
 #  error Unknown platform.
 #endif

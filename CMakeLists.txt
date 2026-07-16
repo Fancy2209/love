@@ -83,7 +83,9 @@ if(POLICY CMP0063)
 	cmake_policy(SET CMP0063 NEW)
 endif()
 
-find_package(OpenGL)
+if(VITA)
+	find_package(OpenGL)
+endif()
 
 if(MEGA)
 	# LOVE_MSVC_DLLS contains runtime DLLs that should be bundled with the love
@@ -187,7 +189,9 @@ Please see https://github.com/love2d/megasource
 	find_package(Freetype REQUIRED)
 	find_package(ModPlug REQUIRED)
 	find_package(OpenAL REQUIRED)
-	find_package(OpenGL REQUIRED)
+	if(VITA)
+		find_package(OpenGL)
+	endif()
 	find_package(SDL2 REQUIRED CONFIG COMPONENTS SDL2main)
 	find_package(Theora REQUIRED)
 	find_package(Vorbis REQUIRED)
@@ -208,19 +212,36 @@ Please see https://github.com/love2d/megasource
 		${THEORA_INCLUDE_DIR}
 	)
 
-	set(LOVE_LINK_LIBRARIES
-		${OPENGL_gl_LIBRARY}
-		${SDL2_LIBRARIES}
-		${FREETYPE_LIBRARY}
-		${OPENAL_LIBRARY}
-		${MODPLUG_LIBRARY}
-		${THEORA_LIBRARY}
-		${THEORADEC_LIBRARY}
-		${VORBISFILE_LIBRARY}
-		${LOVE_LUA_LIBRARY}
-		${OGG_LIBRARY}
-		${ZLIB_LIBRARY}
-	)
+	if(VITA)
+		set(LOVE_LINK_LIBRARIES
+			vitaGL
+			stdc++
+			${SDL2_LIBRARIES}
+			${FREETYPE_LIBRARY}
+			${OPENAL_LIBRARY}
+			${MODPLUG_LIBRARY}
+			${THEORA_LIBRARY}
+			${THEORADEC_LIBRARY}
+			${VORBISFILE_LIBRARY}
+			${LOVE_LUA_LIBRARY}
+			${OGG_LIBRARY}
+			${ZLIB_LIBRARY}
+		)
+	else()
+		set(LOVE_LINK_LIBRARIES
+			${OPENGL_gl_LIBRARY}
+			${SDL2_LIBRARIES}
+			${FREETYPE_LIBRARY}
+			${OPENAL_LIBRARY}
+			${MODPLUG_LIBRARY}
+			${THEORA_LIBRARY}
+			${THEORADEC_LIBRARY}
+			${VORBISFILE_LIBRARY}
+			${LOVE_LUA_LIBRARY}
+			${OGG_LIBRARY}
+			${ZLIB_LIBRARY}
+		)
+	endif()
 
 	if(LOVE_MPG123)
 		find_package(MPG123 REQUIRED)
@@ -1551,8 +1572,10 @@ set(LOVE_SRC_3P_LUASOCKET
 	${LOVE_SRC_3P_LUASOCKET_LIBLUASOCKET}
 )
 
-add_library(love_3p_luasocket ${LOVE_SRC_3P_LUASOCKET})
-target_link_libraries(love_3p_luasocket ${LOVE_LUA_LIBRARY} ${LOVE_LINK_L3P_LUASOCKET_LIBLUASOCKET})
+if(!VITA)
+	add_library(love_3p_luasocket ${LOVE_SRC_3P_LUASOCKET})
+	target_link_libraries(love_3p_luasocket ${LOVE_LUA_LIBRARY} ${LOVE_LINK_L3P_LUASOCKET_LIBLUASOCKET})
+endif()
 
 #
 # APIs from Lua 5.3
@@ -1602,33 +1625,48 @@ add_library(love_3p_noise1234 ${LOVE_SRC_3P_NOISE1234})
 
 set(LOVE_SRC_3P_PHYSFS
 	src/libraries/physfs/physfs_archiver_7z.c
+	src/libraries/physfs/physfs_archiver_csm.c
 	src/libraries/physfs/physfs_archiver_dir.c
 	src/libraries/physfs/physfs_archiver_grp.c
 	src/libraries/physfs/physfs_archiver_hog.c
 	src/libraries/physfs/physfs_archiver_iso9660.c
+	src/libraries/physfs/physfs_archiver_lec3d.c
 	src/libraries/physfs/physfs_archiver_mvl.c
+	src/libraries/physfs/physfs_archiver_pod.c
 	src/libraries/physfs/physfs_archiver_qpak.c
+	src/libraries/physfs/physfs_archiver_rofs.c
 	src/libraries/physfs/physfs_archiver_slb.c
 	src/libraries/physfs/physfs_archiver_unpacked.c
 	src/libraries/physfs/physfs_archiver_vdf.c
 	src/libraries/physfs/physfs_archiver_wad.c
 	src/libraries/physfs/physfs_archiver_zip.c
 	src/libraries/physfs/physfs_byteorder.c
+	src/libraries/physfs/physfs.c
 	src/libraries/physfs/physfs_casefolding.h
+	src/libraries/physfs/physfs.h
 	src/libraries/physfs/physfs_internal.h
 	src/libraries/physfs/physfs_lzmasdk.h
 	src/libraries/physfs/physfs_miniz.h
+	src/libraries/physfs/physfs_platform_android.c
+	src/libraries/physfs/physfs_platform_cafe.c
+	src/libraries/physfs/physfs_platform_ctr.c
+	src/libraries/physfs/physfs_platform_dos.c
+	src/libraries/physfs/physfs_platform_emscripten.c
 	src/libraries/physfs/physfs_platform_haiku.cpp
+	src/libraries/physfs/physfs_platform_libretro.c
+	src/libraries/physfs/physfs_platform_ogc.c
 	src/libraries/physfs/physfs_platform_os2.c
+	src/libraries/physfs/physfs_platform_playdate.c
 	src/libraries/physfs/physfs_platform_posix.c
 	src/libraries/physfs/physfs_platform_qnx.c
+	src/libraries/physfs/physfs_platform_sdl3.c
+	src/libraries/physfs/physfs_platforms.h
 	src/libraries/physfs/physfs_platform_unix.c
+	src/libraries/physfs/physfs_platform_vita.c
 	src/libraries/physfs/physfs_platform_windows.c
 	src/libraries/physfs/physfs_platform_winrt.cpp
-	src/libraries/physfs/physfs_platforms.h
 	src/libraries/physfs/physfs_unicode.c
-	src/libraries/physfs/physfs.c
-	src/libraries/physfs/physfs.h
+
 )
 
 if(APPLE)
@@ -1708,23 +1746,42 @@ set(LOVE_SRC_3P_XXHASH
 
 add_library(love_3p_xxhash ${LOVE_SRC_3P_XXHASH})
 
-set(LOVE_3P
-	love_3p_box2d
-	love_3p_ddsparse
-	love_3p_enet
-	love_3p_glad
-	love_3p_glslang
-	love_3p_lodepng
-	love_3p_luasocket
-	love_3p_lua53
-	love_3p_lz4
-	love_3p_noise1234
-	love_3p_physfs
-	love_3p_wuff
-	love_3p_xxhash
-)
+if(VITA)
+	set(LOVE_3P
+		love_3p_box2d
+		love_3p_ddsparse
+		love_3p_enet
+		love_3p_glad
+		love_3p_glslang
+		love_3p_lodepng
+		love_3p_lua53
+		love_3p_lz4
+		love_3p_noise1234
+		love_3p_physfs
+		love_3p_wuff
+		love_3p_xxhash
+	)
 
-love_disable_warnings(love_3p_box2d love_3p_enet love_3p_luasocket love_3p_physfs)
+	love_disable_warnings(love_3p_box2d love_3p_enet love_3p_physfs)
+else()
+	set(LOVE_3P
+		love_3p_box2d
+		love_3p_ddsparse
+		love_3p_enet
+		love_3p_glad
+		love_3p_glslang
+		love_3p_lodepng
+		love_3p_luasocket
+		love_3p_lua53
+		love_3p_lz4
+		love_3p_noise1234
+		love_3p_physfs
+		love_3p_wuff
+		love_3p_xxhash
+	)
+
+	love_disable_warnings(love_3p_box2d love_3p_enet love_3p_luasocket love_3p_physfs)
+endif()
 
 #
 # liblove

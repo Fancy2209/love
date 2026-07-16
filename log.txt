@@ -1,0 +1,1075 @@
+[  4%] Built target love_3p_enet
+[  4%] Built target love_3p_glad
+[  4%] Built target love_3p_lua53
+[  4%] Built target love_3p_lz4
+[  7%] Building C object CMakeFiles/love_3p_physfs.dir/src/libraries/physfs/physfs_platform_vita.c.obj
+[  7%] Built target love_3p_noise1234
+[  7%] Built target love_3p_xxhash
+[  8%] Built target love_3p_lodepng
+[  9%] Built target love_3p_ddsparse
+[ 10%] Built target love_3p_wuff
+[ 18%] Built target love_3p_glslang
+[ 30%] Built target love_3p_box2d
+[ 31%] Linking CXX static library liblove_3p_physfs.a
+[ 39%] Built target love_3p_physfs
+[100%] Built target liblove
+[100%] Linking CXX executable love
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(eh_alloc.o): in function `(anonymous namespace)::pool::~pool()':
+eh_alloc.cc:(.text._ZN12_GLOBAL__N_14poolD2Ev+0xe): undefined reference to `pthread_mutex_destroy'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(eh_alloc.o): in function `(anonymous namespace)::pool::free(void*) [clone .constprop.0]':
+eh_alloc.cc:(.text._ZN12_GLOBAL__N_14pool4freeEPv.constprop.0+0x16): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: eh_alloc.cc:(.text._ZN12_GLOBAL__N_14pool4freeEPv.constprop.0+0x84): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(eh_alloc.o): in function `(anonymous namespace)::pool::allocate(unsigned int) [clone .constprop.0]':
+eh_alloc.cc:(.text._ZN12_GLOBAL__N_14pool8allocateEj.constprop.0+0x16): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: eh_alloc.cc:(.text._ZN12_GLOBAL__N_14pool8allocateEj.constprop.0+0x62): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(eh_alloc.o): in function `_GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv':
+eh_alloc.cc:(.text.startup._GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv+0x16): undefined reference to `pthread_mutex_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(guard.o): in function `(anonymous namespace)::mutex_wrapper::~mutex_wrapper() [clone .part.0]':
+guard.cc:(.text._ZN12_GLOBAL__N_113mutex_wrapperD2Ev.part.0+0x16): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(guard.o): in function `__cxa_guard_acquire':
+guard.cc:(.text.__cxa_guard_acquire+0x34): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_acquire+0x3a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_acquire+0x68): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_acquire+0x80): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_acquire+0x88): undefined reference to `pthread_cond_wait'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_acquire+0x96): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(guard.o): in function `__cxa_guard_abort':
+guard.cc:(.text.__cxa_guard_abort+0x1e): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_abort+0x2c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_abort+0x46): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_abort+0x54): undefined reference to `pthread_cond_broadcast'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_abort+0x5c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(guard.o): in function `__cxa_guard_release':
+guard.cc:(.text.__cxa_guard_release+0x1e): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_release+0x2c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_release+0x4c): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_release+0x5a): undefined reference to `pthread_cond_broadcast'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: guard.cc:(.text.__cxa_guard_release+0x62): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcGetCurrentContext':
+(.text+0x10e8): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `VerifyContext':
+(.text+0x1112): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1164): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1178): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `VerifyDevice':
+(.text+0x11c2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x120a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1216): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcCaptureStop':
+(.text+0x13e4): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1414): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcDevicePauseSOFT':
+(.text+0x14ec): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x150c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `ReleaseContext':
+(.text+0x1b98): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1c30): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1cda): undefined reference to `pthread_setspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcCaptureCloseDevice':
+(.text+0x1d92): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1de2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1e60): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1e66): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1e7c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcCloseDevice':
+(.text+0x1f30): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1f6c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1f98): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x200c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2096): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcDestroyContext':
+(.text+0x213a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2158): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2182): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2188): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x21ea): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcSetThreadContext':
+(.text+0x226a): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2274): undefined reference to `pthread_setspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcMakeContextCurrent':
+(.text+0x23a6): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x23b2): undefined reference to `pthread_setspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2442): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcCaptureSamples':
+(.text+0x2e44): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2e7a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2e90): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcLoopbackOpenDeviceSOFT':
+(.text+0x2f1a): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcOpenDevice':
+(.text+0x31a4): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcDeviceResumeSOFT':
+(.text+0x38f8): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x390c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcCaptureStart':
+(.text+0x3b10): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3b4e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcCaptureOpenDevice':
+(.text+0x3c0e): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcGetString':
+(.text+0x4070): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4076): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4092): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x425a): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4260): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4288): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4340): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x435e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x443c): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4444): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4460): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4480): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4488): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x44a4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `GetIntegerv':
+(.text+0x4a20): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4a40): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4a6e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4a80): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4b40): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4c38): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4cb0): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4ce2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4cf6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4d08): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcGetInteger64vSOFT':
+(.text+0x4fac): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4fd8): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x50e6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x52c6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x53b6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x540c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5412): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x54d6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x54fe): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `ALCcontext_ProcessUpdates':
+(.text+0x5b62): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5b9e): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `GetContextRef':
+(.text+0x5e46): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5e7c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5e90): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `UpdateDeviceParams':
+(.text+0x703e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7044): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7098): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x70a6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7334): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7376): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcResetDeviceSOFT':
+(.text+0x7d50): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7d74): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7e0e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7e16): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7e28): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcCreateContext':
+(.text+0x7f7a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7fa2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7faa): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x8252): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x82d2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x8544): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x8676): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `alcGetThreadContext':
+(.text+0x432): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(ALc.c.obj): in function `ALCcontext_ProcessUpdates':
+(.text+0x5b88): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5c0a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(eh_globals.o): in function `__eh_globals_init::~__eh_globals_init()':
+eh_globals.cc:(.text._ZN17__eh_globals_initD2Ev[_ZN17__eh_globals_initD5Ev]+0xe): undefined reference to `pthread_key_delete'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(eh_globals.o): in function `__cxa_get_globals_fast':
+eh_globals.cc:(.text.__cxa_get_globals_fast+0x1a): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(eh_globals.o): in function `__cxa_get_globals':
+eh_globals.cc:(.text.__cxa_get_globals+0x1c): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: eh_globals.cc:(.text.__cxa_get_globals+0x34): undefined reference to `pthread_setspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(eh_globals.o): in function `_GLOBAL__sub_I___cxa_get_globals_fast':
+eh_globals.cc:(.text.startup._GLOBAL__sub_I___cxa_get_globals_fast+0x22): undefined reference to `pthread_key_create'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: libliblove.a(love.cpp.obj): in function `luaopen_love':
+love.cpp:(.text+0x8e4): undefined reference to `love::luasocket::__open(lua_State*)'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: libliblove.a(memory.cpp.obj): in function `love::alignedMalloc(void**, unsigned int, unsigned int)':
+memory.cpp:(.text+0x12): undefined reference to `posix_memalign'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(locale.o): in function `__gnu_cxx::__mutex::~__mutex()':
+locale.cc:(.text._ZN9__gnu_cxx7__mutexD2Ev[_ZN9__gnu_cxx7__mutexD5Ev]+0xe): undefined reference to `pthread_mutex_destroy'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(locale.o): in function `__gnu_cxx::__scoped_lock::~__scoped_lock()':
+locale.cc:(.text._ZN9__gnu_cxx13__scoped_lockD2Ev[_ZN9__gnu_cxx13__scoped_lockD5Ev]+0x10): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(locale.o): in function `std::locale::facet::_S_get_c_locale()':
+locale.cc:(.text._ZNSt6locale5facet15_S_get_c_localeEv+0x1c): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(locale.o): in function `std::locale::_Impl::_M_install_cache(std::locale::facet const*, unsigned int)':
+locale.cc:(.text._ZNSt6locale5_Impl16_M_install_cacheEPKNS_5facetEj+0x36): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: locale.cc:(.text._ZNSt6locale5_Impl16_M_install_cacheEPKNS_5facetEj+0x1d0): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: locale.cc:(.text._ZNSt6locale5_Impl16_M_install_cacheEPKNS_5facetEj+0x1fe): undefined reference to `pthread_mutex_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(locale_init.o): in function `(anonymous namespace)::get_locale_mutex()':
+locale_init.cc:(.text._ZN12_GLOBAL__N_116get_locale_mutexEv+0x3c): undefined reference to `pthread_mutex_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(locale_init.o): in function `std::locale::_S_initialize()':
+locale_init.cc:(.text._ZNSt6locale13_S_initializeEv+0x1c): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(locale_init.o): in function `std::locale::classic()':
+locale_init.cc:(.text._ZNSt6locale7classicEv+0x1c): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(locale_init.o): in function `std::locale::locale()':
+locale_init.cc:(.text._ZNSt6localeC2Ev+0x24): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: locale_init.cc:(.text._ZNSt6localeC2Ev+0x4c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: locale_init.cc:(.text._ZNSt6localeC2Ev+0x62): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/lib/libstdc++.a(locale_init.o): in function `std::locale::global(std::locale const&)':
+locale_init.cc:(.text._ZNSt6locale6globalERKS_+0x24): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: locale_init.cc:(.text._ZNSt6locale6globalERKS_+0x3e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: locale_init.cc:(.text._ZNSt6locale6globalERKS_+0x8c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libfreetype.a(sfnt.c.obj): in function `Load_SBit_Png':
+(.text+0x3642): undefined reference to `png_create_read_struct'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x364e): undefined reference to `png_create_info_struct'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3666): undefined reference to `png_set_longjmp_fn'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3686): undefined reference to `png_destroy_read_struct'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x36a2): undefined reference to `png_set_read_fn'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x36aa): undefined reference to `png_read_info'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x36c6): undefined reference to `png_get_IHDR'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x36f8): undefined reference to `png_set_expand_gray_1_2_4_to_8'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3702): undefined reference to `png_get_valid'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x372c): undefined reference to `png_set_interlace_handling'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3736): undefined reference to `png_set_filler'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x373e): undefined reference to `png_read_update_info'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x375c): undefined reference to `png_get_IHDR'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3786): undefined reference to `png_set_read_user_transform_fn'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x37e4): undefined reference to `png_read_image'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x37ec): undefined reference to `png_read_end'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3824): undefined reference to `png_set_palette_to_rgb'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3834): undefined reference to `png_set_gray_to_rgb'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x383c): undefined reference to `png_set_packing'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3844): undefined reference to `png_set_tRNS_to_alpha'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x384c): undefined reference to `png_set_strip_16'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x385c): undefined reference to `png_set_read_user_transform_fn'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3876): undefined reference to `png_destroy_read_struct'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libfreetype.a(sfnt.c.obj): in function `error_callback':
+(.text+0x38d2): undefined reference to `png_get_error_ptr'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x38e6): undefined reference to `png_set_longjmp_fn'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libfreetype.a(sfnt.c.obj): in function `read_data_from_FT_Stream':
+(.text+0x4ca0): undefined reference to `png_get_io_ptr'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4cc4): undefined reference to `png_get_error_ptr'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4cd2): undefined reference to `png_error'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libfreetype.a(ftbzip2.c.obj): in function `ft_bzip2_stream_close':
+(.text+0x28): undefined reference to `BZ2_bzDecompressEnd'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libfreetype.a(ftbzip2.c.obj): in function `ft_bzip2_file_fill_output':
+(.text+0x8c): undefined reference to `BZ2_bzDecompress'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libfreetype.a(ftbzip2.c.obj): in function `ft_bzip2_stream_io':
+(.text+0x146): undefined reference to `BZ2_bzDecompressEnd'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x180): undefined reference to `BZ2_bzDecompressInit'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libfreetype.a(ftbzip2.c.obj): in function `FT_Stream_OpenBzip2':
+(.text+0x330): undefined reference to `BZ2_bzDecompressInit'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alDeleteBuffers':
+(.text+0x434): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4c6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alGenBuffers':
+(.text+0x5fe): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x69e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x782): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7a4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alIsBuffer':
+(.text+0x7ce): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x826): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alBufferData':
+(.text+0x86a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x90e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alBufferStorageSOFT':
+(.text+0x9a2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa4a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alMapBufferSOFT':
+(.text+0xb02): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xbb4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alUnmapBufferSOFT':
+(.text+0xccc): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd2e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd54): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd78): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alFlushMappedBufferSOFT':
+(.text+0xda8): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xe2a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alBufferSubDataSOFT':
+(.text+0xeb0): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1094): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alBufferf':
+(.text+0x1254): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x12b8): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alBuffer3f':
+(.text+0x1300): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1364): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alBufferfv':
+(.text+0x13ae): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1416): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alBufferi':
+(.text+0x1472): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x14f0): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1510): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1530): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alBuffer3i':
+(.text+0x15a0): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1604): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alBufferiv':
+(.text+0x1658): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x16ce): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alGetBufferf':
+(.text+0x1796): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x17fe): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alGetBuffer3f':
+(.text+0x1860): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x18e2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x191e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alGetBufferfv':
+(.text+0x1952): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x19be): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x19e4): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1a4a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alGetBufferi':
+(.text+0x1aa2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1b32): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1b72): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alGetBuffer3i':
+(.text+0x1c30): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1cb2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1cee): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `alGetBufferiv':
+(.text+0x1d40): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1da4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1dc8): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `LockBufferList':
+(.text+0x3a6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alBuffer.c.obj): in function `UnlockBufferList':
+(.text+0x3ae): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alError.c.obj): in function `alSetError':
+(.text+0xe0): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x10a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alListeneri':
+(.text+0x10): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x28): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alGetListenerf':
+(.text+0x4c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x6a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x8e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xc6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alGetListener3f':
+(.text+0xf0): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x120): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x152): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x176): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x196): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alGetListenerfv':
+(.text+0x1d2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1fe): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x224): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alGetListeneri':
+(.text+0x2aa): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2c4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2e6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alGetListener3i':
+(.text+0x314): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x344): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x38a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3b0): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alGetListeneriv':
+(.text+0x3f2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x42c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x45e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alListenerf':
+(.text+0x54a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x574): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alListener3f':
+(.text+0x65a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x682): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alListener3i':
+(.text+0x784): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x79c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alListenerfv':
+(.text+0x816): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x82e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x85a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x942): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x956): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alListener.c.obj): in function `alListeneriv':
+(.text+0x9b0): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x9c8): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa4a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `GetSourceSampleOffset':
+(.text+0x896): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `GetSourceSecOffset':
+(.text+0x984): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `GetSourcedv':
+(.text+0x108c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x10b6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x10f0): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `GetSourcei64v':
+(.text+0x1626): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1650): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `SetSourceiv.isra.0':
+(.text+0x2086): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x20a6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2122): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2340): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2434): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2502): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x25e8): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x263a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2652): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj):(.text+0x2668): more undefined references to `pthread_mutex_unlock' follow
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `SetSourceiv.isra.0':
+(.text+0x26fe): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x271a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2782): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x27b4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alDeleteSources':
+(.text+0x2ae6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2c8e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGenSources':
+(.text+0x2d2a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2efc): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2f9c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x300c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3028): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alIsSource':
+(.text+0x30e0): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x312c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourcef':
+(.text+0x3166): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x316c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x31d6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x31dc): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSource3f':
+(.text+0x323c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3242): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x32ac): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x32b2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourcefv':
+(.text+0x331a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3320): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x338c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3392): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourcedSOFT':
+(.text+0x340c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3412): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3482): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3488): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSource3dSOFT':
+(.text+0x3502): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3508): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3578): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x357e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourcedvSOFT':
+(.text+0x35f8): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x35fe): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3676): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x367c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourcei':
+(.text+0x3748): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x374e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x37bc): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x37c2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSource3i':
+(.text+0x3820): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3826): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3890): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3896): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourceiv':
+(.text+0x38f6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x38fc): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3968): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x396e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourcei64SOFT':
+(.text+0x39e2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x39e8): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3a56): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3a5c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSource3i64SOFT':
+(.text+0x3abe): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3ac4): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3b34): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3b3a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourcei64vSOFT':
+(.text+0x3ba6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3bac): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3c18): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3c1e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSourcef':
+(.text+0x3c8c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3d00): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSource3f':
+(.text+0x3d82): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3dfe): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSourcefv':
+(.text+0x3e9c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3f16): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSourcedSOFT':
+(.text+0x3fde): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4052): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x407a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x40aa): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSource3dSOFT':
+(.text+0x40da): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4156): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSourcedvSOFT':
+(.text+0x41e6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x424e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4276): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x42ae): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSourcei':
+(.text+0x42d6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x434a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4372): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x43a2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSource3i':
+(.text+0x43d2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x444e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSourceiv':
+(.text+0x44d6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x453e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4566): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x459e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSourcei64SOFT':
+(.text+0x45c6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x463a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4662): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4692): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSource3i64SOFT':
+(.text+0x46c2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x473e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alGetSourcei64vSOFT':
+(.text+0x47ce): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4836): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x485e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4896): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourcePlayv':
+(.text+0x48c6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4958): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourcePause':
+(.text+0x4e84): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4f7e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourcePausev':
+(.text+0x4fda): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5148): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourceStop':
+(.text+0x51ac): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5280): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourceStopv':
+(.text+0x5316): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x548a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourceRewind':
+(.text+0x5500): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x560a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourceRewindv':
+(.text+0x566a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x57c2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourceQueueBuffers':
+(.text+0x585a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5906): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x59e4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5ab0): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5ab6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourceQueueBufferLayersSOFT':
+(.text+0x5b72): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5c10): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5d00): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5db2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5db8): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `alSourceUnqueueBuffers':
+(.text+0x5e62): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5f44): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5f82): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5fa6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alSource.c.obj): in function `SetSourceiv.isra.0':
+(.text+0x21d4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alIsEnabled':
+(.text+0x42): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x52): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alGetBoolean':
+(.text+0x94): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alGetDouble':
+(.text+0x1a6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1de): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alGetFloat':
+(.text+0x2c4): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2f8): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alGetInteger':
+(.text+0x3b4): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3ec): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alGetInteger64SOFT':
+(.text+0x49c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4d8): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alGetPointerSOFT':
+(.text+0x58e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5a6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alGetPointervSOFT':
+(.text+0x8b4): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x8cc): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alEnable':
+(.text+0xb1a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xb3a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xb5e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xb7a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alDisable':
+(.text+0xb9a): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xbba): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xbde): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xbf8): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alDopplerFactor':
+(.text+0xc68): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xc84): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alDopplerVelocity':
+(.text+0xd08): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd30): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd44): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd5c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alSpeedOfSound':
+(.text+0xdd8): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xdf4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alState.c.obj): in function `alDistanceModel':
+(.text+0xe30): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xe3e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(helpers.c.obj): in function `SetRTPriority':
+(.text+0x322): undefined reference to `sched_get_priority_min'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x328): undefined reference to `pthread_self'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x330): undefined reference to `pthread_setschedparam'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(helpers.c.obj): in function `SearchDataFiles':
+(.text+0xd2c): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(hrtf.c.obj): in function `GetLoadedHrtf':
+(.text+0x1fc4): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(hrtf.c.obj): in function `Hrtf_DecRef':
+(.text+0x445e): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(null.c.obj): in function `ALCnullBackend_mixerProc':
+(.text+0x96): undefined reference to `pthread_self'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(vita.c.obj): in function `ALCvitaPlayback_ALCbackend_reset':
+(.text+0x1e4): undefined reference to `sceAudioOutSetConfig'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(wave.c.obj): in function `ALCwaveBackend_mixerProc':
+(.text+0xc6): undefined reference to `pthread_self'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `almtx_lock':
+(.text+0x66): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `almtx_unlock':
+(.text+0x76): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `almtx_trylock':
+(.text+0x86): undefined reference to `pthread_mutex_trylock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `altss_set':
+(.text+0x9e): undefined reference to `pthread_setspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `althrd_create':
+(.text+0xd6): undefined reference to `pthread_attr_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xec): undefined reference to `pthread_attr_setstacksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x102): undefined reference to `pthread_create'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x11e): undefined reference to `pthread_create'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x128): undefined reference to `pthread_attr_destroy'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x14c): undefined reference to `pthread_attr_destroy'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `althrd_detach':
+(.text+0x15e): undefined reference to `pthread_detach'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `althrd_join':
+(.text+0x174): undefined reference to `pthread_join'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `almtx_init':
+(.text+0x19a): undefined reference to `pthread_mutex_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1ae): undefined reference to `pthread_mutexattr_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1c2): undefined reference to `pthread_mutexattr_settype'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1cc): undefined reference to `pthread_mutex_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1d4): undefined reference to `pthread_mutexattr_destroy'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1de): undefined reference to `pthread_mutexattr_setkind_np'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alcnd_init':
+(.text+0x1f4): undefined reference to `pthread_cond_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alcnd_signal':
+(.text+0x202): undefined reference to `pthread_cond_signal'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alcnd_broadcast':
+(.text+0x212): undefined reference to `pthread_cond_broadcast'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alcnd_wait':
+(.text+0x222): undefined reference to `pthread_cond_wait'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alsem_init':
+(.text+0x23a): undefined reference to `sem_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alsem_post':
+(.text+0x24e): undefined reference to `sem_post'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alsem_wait':
+(.text+0x25e): undefined reference to `sem_wait'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alsem_trywait':
+(.text+0x27a): undefined reference to `sem_trywait'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `altss_create':
+(.text+0x2a6): undefined reference to `pthread_key_create'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `althrd_current':
+(.text+0x20): undefined reference to `pthread_self'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `althrd_equal':
+(.text+0x24): undefined reference to `pthread_equal'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `althrd_exit':
+(.text+0x28): undefined reference to `pthread_exit'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `althrd_yield':
+(.text+0x2c): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `altss_get':
+(.text+0x98): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alcall_once':
+(.text+0xac): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `almtx_destroy':
+(.text+0x1ec): undefined reference to `pthread_mutex_destroy'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alcnd_destroy':
+(.text+0x230): undefined reference to `pthread_cond_destroy'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `alsem_destroy':
+(.text+0x248): undefined reference to `sem_destroy'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(threads.c.obj): in function `altss_delete':
+(.text+0x2b4): undefined reference to `pthread_key_delete'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alIsAuxiliaryEffectSlot':
+(.text+0x22): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x40): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alGetAuxiliaryEffectSloti':
+(.text+0x70): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x98): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xbc): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xe4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alGetAuxiliaryEffectSlotiv':
+(.text+0x110): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x13e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x16a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alGetAuxiliaryEffectSlotf':
+(.text+0x190): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1b6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1da): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x202): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alGetAuxiliaryEffectSlotfv':
+(.text+0x228): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x25a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x27c): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x29a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2d4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `InitializeEffect':
+(.text+0x474): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x496): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4c0): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alDeleteAuxiliaryEffectSlots':
+(.text+0x568): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x5c2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x672): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alGenAuxiliaryEffectSlots':
+(.text+0x866): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xabe): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xb30): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xb48): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xb6a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alAuxiliaryEffectSloti':
+(.text+0xde8): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xdee): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xe30): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xe36): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xe7e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xed2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xefa): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alAuxiliaryEffectSlotiv':
+(.text+0xf50): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xf7e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xfac): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alAuxiliaryEffectSlotf':
+(.text+0xfde): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xfe4): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x102e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1034): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `alAuxiliaryEffectSlotfv':
+(.text+0x10b4): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x10e2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x110c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `UpdateAllEffectSlotProps':
+(.text+0x1128): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `LockEffectSlotList':
+(.text+0x2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `UnlockEffectSlotList':
+(.text+0xa): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alAuxEffectSlot.c.obj): in function `UpdateAllEffectSlotProps':
+(.text+0x1170): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1188): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alDeleteEffects':
+(.text+0x42): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x15c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alGenEffects':
+(.text+0x1ee): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x29c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x380): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3a2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alIsEffect':
+(.text+0x3ce): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x426): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alEffecti':
+(.text+0x462): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4cc): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4f4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alEffectiv':
+(.text+0x9ee): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa4e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alEffectf':
+(.text+0xa9e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xb02): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xb2a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alEffectfv':
+(.text+0xb56): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xbba): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xbe2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alGetEffecti':
+(.text+0xc12): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xc7e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alGetEffectiv':
+(.text+0xcda): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd38): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd5e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xdb6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alGetEffectf':
+(.text+0xe0e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xe72): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xe9a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `alGetEffectfv':
+(.text+0xec6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xf2a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xf52): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `LockEffectList':
+(.text+0x2): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alEffect.c.obj): in function `UnlockEffectList':
+(.text+0xa): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alDeleteFilters':
+(.text+0x6ce): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7cc): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alGenFilters':
+(.text+0x866): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x91e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa00): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa22): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alIsFilter':
+(.text+0xa66): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xaba): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alFilteri':
+(.text+0xaf6): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xb5c): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xb84): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alFilteriv':
+(.text+0xc60): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xcb8): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alFilterf':
+(.text+0xd06): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd60): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xd88): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alFilterfv':
+(.text+0xdb4): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xe0e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xe36): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alGetFilteri':
+(.text+0xe66): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xed2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alGetFilteriv':
+(.text+0xf2e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xf88): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xfae): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1002): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alGetFilterf':
+(.text+0x1058): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x10b2): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x10da): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `alGetFilterfv':
+(.text+0x1104): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x115e): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1186): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `LockFilterList':
+(.text+0x69e): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(alFilter.c.obj): in function `UnlockFilterList':
+(.text+0x6a6): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(event.c.obj): in function `EventThread':
+(.text+0x26): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x78): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x80): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(event.c.obj): in function `alEventControlSOFT':
+(.text+0x140): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x146): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(event.c.obj): in function `alEventCallbackSOFT':
+(.text+0x1de): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1e4): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1ee): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1f4): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(fshifter.c.obj): in function `FshifterStateFactory_EffectStateFactory_create':
+(.text+0x772): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(pshifter.c.obj): in function `PshifterStateFactory_EffectStateFactory_create':
+(.text+0xb9e): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(base.c.obj): in function `ALCbackend_getClockLatency':
+(.text+0x128): undefined reference to `sched_yield'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(base.c.obj): in function `ALCbackend_lock':
+(.text+0x132): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libopenal.a(base.c.obj): in function `ALCbackend_unlock':
+(.text+0x13a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `_initial_pcmoffset':
+(.text+0x412): undefined reference to `vorbis_packet_blocksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_raw_seek':
+(.text+0x7c0): undefined reference to `vorbis_dsp_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7c8): undefined reference to `vorbis_block_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x7e6): undefined reference to `vorbis_synthesis_restart'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x8b2): undefined reference to `vorbis_packet_blocksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa18): undefined reference to `vorbis_dsp_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa1e): undefined reference to `vorbis_block_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xaa4): undefined reference to `vorbis_dsp_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xaac): undefined reference to `vorbis_block_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `_fetch_headers.constprop.0':
+(.text+0xae6): undefined reference to `vorbis_info_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xaec): undefined reference to `vorbis_comment_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xc1e): undefined reference to `vorbis_synthesis_headerin'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xc5a): undefined reference to `vorbis_info_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xc60): undefined reference to `vorbis_comment_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xca6): undefined reference to `vorbis_synthesis_idheader'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xcbc): undefined reference to `vorbis_synthesis_headerin'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `_fetch_and_process_packet.constprop.1':
+(.text+0xfa6): undefined reference to `vorbis_dsp_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xfac): undefined reference to `vorbis_block_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xff8): undefined reference to `vorbis_info_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xffe): undefined reference to `vorbis_comment_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1022): undefined reference to `vorbis_synthesis_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1030): undefined reference to `vorbis_block_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1046): undefined reference to `vorbis_synthesis_halfrate_p'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1056): undefined reference to `vorbis_synthesis'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1084): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x109a): undefined reference to `vorbis_synthesis_blockin'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x10a2): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1108): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x115e): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_pcm_seek.part.0':
+(.text+0x11f4): undefined reference to `vorbis_synthesis_halfrate_p'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1274): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x128c): undefined reference to `vorbis_synthesis_read'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x132e): undefined reference to `vorbis_packet_blocksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x135a): undefined reference to `vorbis_info_blocksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1386): undefined reference to `vorbis_synthesis_trackonly'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1390): undefined reference to `vorbis_synthesis_blockin'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x13ee): undefined reference to `vorbis_synthesis_read'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x141a): undefined reference to `vorbis_dsp_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1422): undefined reference to `vorbis_block_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1480): undefined reference to `vorbis_synthesis_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x148c): undefined reference to `vorbis_block_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_read_filter.part.0':
+(.text+0x1524): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x182a): undefined reference to `vorbis_synthesis_read'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x1830): undefined reference to `vorbis_synthesis_halfrate_p'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `_fetch_and_process_packet.constprop.0':
+(.text+0x222e): undefined reference to `vorbis_synthesis_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x223c): undefined reference to `vorbis_block_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2252): undefined reference to `vorbis_synthesis_halfrate_p'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2262): undefined reference to `vorbis_synthesis'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x22ce): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x22e4): undefined reference to `vorbis_synthesis_blockin'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x22ec): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2352): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x23a8): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `_ov_getlap':
+(.text+0x2402): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x244c): undefined reference to `vorbis_synthesis_read'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2466): undefined reference to `vorbis_synthesis_lapout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `_ov_d_seek_lap':
+(.text+0x2524): undefined reference to `vorbis_synthesis_halfrate_p'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2536): undefined reference to `vorbis_info_blocksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2544): undefined reference to `vorbis_window'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2642): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2678): undefined reference to `vorbis_info_blocksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2686): undefined reference to `vorbis_window'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2692): undefined reference to `vorbis_synthesis_lapout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `_ov_64_seek_lap':
+(.text+0x2712): undefined reference to `vorbis_synthesis_halfrate_p'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2724): undefined reference to `vorbis_info_blocksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2734): undefined reference to `vorbis_window'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2832): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2868): undefined reference to `vorbis_info_blocksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2876): undefined reference to `vorbis_window'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2882): undefined reference to `vorbis_synthesis_lapout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `_fetch_headers':
+(.text+0x28dc): undefined reference to `vorbis_info_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x28e2): undefined reference to `vorbis_comment_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2a8c): undefined reference to `vorbis_synthesis_headerin'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2ac8): undefined reference to `vorbis_info_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2ace): undefined reference to `vorbis_comment_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2b14): undefined reference to `vorbis_synthesis_idheader'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x2b2a): undefined reference to `vorbis_synthesis_headerin'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_pcm_seek_page':
+(.text+0x35a4): undefined reference to `vorbis_dsp_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x35ac): undefined reference to `vorbis_block_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x366a): undefined reference to `vorbis_dsp_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3672): undefined reference to `vorbis_block_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x39fc): undefined reference to `vorbis_dsp_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3a04): undefined reference to `vorbis_block_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3cdc): undefined reference to `vorbis_synthesis_restart'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3ce4): undefined reference to `vorbis_synthesis_restart'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_pcm_seek':
+(.text+0x3db6): undefined reference to `vorbis_synthesis_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3dc2): undefined reference to `vorbis_block_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_clear':
+(.text+0x3e08): undefined reference to `vorbis_block_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3e10): undefined reference to `vorbis_dsp_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3e2e): undefined reference to `vorbis_info_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3e3a): undefined reference to `vorbis_comment_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_halfrate':
+(.text+0x417e): undefined reference to `vorbis_synthesis_halfrate'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x41a2): undefined reference to `vorbis_dsp_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x41a8): undefined reference to `vorbis_block_clear'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x41de): undefined reference to `vorbis_synthesis_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x41ea): undefined reference to `vorbis_block_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_time_seek':
+(.text+0x4800): undefined reference to `vorbis_synthesis_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x480c): undefined reference to `vorbis_block_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_read_float':
+(.text+0x4e44): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4e50): undefined reference to `vorbis_synthesis_halfrate_p'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4e6c): undefined reference to `vorbis_synthesis_read'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_crosslap':
+(.text+0x4f02): undefined reference to `vorbis_synthesis_pcmout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4f48): undefined reference to `vorbis_synthesis_halfrate_p'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4f5c): undefined reference to `vorbis_synthesis_halfrate_p'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4f76): undefined reference to `vorbis_info_blocksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4f82): undefined reference to `vorbis_info_blocksize'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4f96): undefined reference to `vorbis_window'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x4fa4): undefined reference to `vorbis_window'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x507a): undefined reference to `vorbis_synthesis_lapout'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libvorbisfile.a(vorbisfile.c.obj): in function `ov_halfrate_p':
+(.text+0x4220): undefined reference to `vorbis_synthesis_halfrate_p'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: liblove_3p_glslang.a(ossource.cpp.obj): in function `glslang::OS_CleanupThreadData()':
+ossource.cpp:(.text+0x26): undefined reference to `pthread_setcancelstate'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: ossource.cpp:(.text+0x34): undefined reference to `pte_push_cleanup(pte_cleanup_t*, void (*)(void*), void*)'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: ossource.cpp:(.text+0x40): undefined reference to `pthread_setcanceltype'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: ossource.cpp:(.text+0x46): undefined reference to `pte_pop_cleanup(int)'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: ossource.cpp:(.text+0x50): undefined reference to `pthread_setcanceltype'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: liblove_3p_glslang.a(ossource.cpp.obj): in function `glslang::OS_AllocTLSIndex()':
+ossource.cpp:(.text+0x6c): undefined reference to `pthread_key_create'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: liblove_3p_glslang.a(ossource.cpp.obj): in function `glslang::OS_SetTLSValue(void*, void*)':
+ossource.cpp:(.text+0xe2): undefined reference to `pthread_setspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: liblove_3p_glslang.a(ossource.cpp.obj): in function `glslang::OS_GetTLSValue(void*)':
+ossource.cpp:(.text+0x13a): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: liblove_3p_glslang.a(ossource.cpp.obj): in function `glslang::OS_FreeTLSIndex(void*)':
+ossource.cpp:(.text+0x17e): undefined reference to `pthread_key_delete'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: liblove_3p_glslang.a(ossource.cpp.obj): in function `glslang::InitGlobalLock()':
+ossource.cpp:(.text+0x1b6): undefined reference to `pthread_mutexattr_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: ossource.cpp:(.text+0x1c0): undefined reference to `pthread_mutexattr_settype'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: ossource.cpp:(.text+0x1ce): undefined reference to `pthread_mutex_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: liblove_3p_glslang.a(ossource.cpp.obj): in function `glslang::GetGlobalLock()':
+ossource.cpp:(.text+0x1ea): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: liblove_3p_glslang.a(ossource.cpp.obj): in function `glslang::ReleaseGlobalLock()':
+ossource.cpp:(.text+0x202): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libluajit-5.1.a(lj_clib.o): in function `clib_error_':
+(.text+0x8): undefined reference to `dlerror'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libluajit-5.1.a(lj_clib.o): in function `lj_clib_index':
+(.text+0x150): undefined reference to `dlsym'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libluajit-5.1.a(lj_clib.o): in function `lj_clib_load':
+(.text+0x274): undefined reference to `dlopen'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x348): undefined reference to `dlerror'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3ec): undefined reference to `dlopen'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x3f8): undefined reference to `dlerror'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libluajit-5.1.a(lj_clib.o): in function `lj_clib_unload':
+(.text+0x4d8): undefined reference to `dlclose'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libluajit-5.1.a(lib_package.o): in function `lj_cf_package_loader_preload':
+(.text+0x6f8): undefined reference to `dlsym'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libluajit-5.1.a(lib_package.o): in function `lj_cf_package_unloadlib':
+(.text+0x888): undefined reference to `dlclose'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/arm-vita-eabi/lib/libluajit-5.1.a(lib_package.o): in function `ll_loadfunc.part.0':
+(.text+0x918): undefined reference to `dlsym'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x954): undefined reference to `dlsym'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x960): undefined reference to `dlerror'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0x990): undefined reference to `dlsym'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa4c): undefined reference to `dlopen'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa5c): undefined reference to `dlerror'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: (.text+0xa94): undefined reference to `dlerror'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/libgcc.a(emutls.o): in function `__gthread_getspecific':
+emutls.c:(.text+0x12): undefined reference to `pthread_getspecific'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/libgcc.a(emutls.o): in function `__gthread_mutex_init_function.constprop.0':
+emutls.c:(.text+0xb0): undefined reference to `pthread_mutex_init'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/libgcc.a(emutls.o): in function `__gthread_key_create.constprop.0':
+emutls.c:(.text+0xc4): undefined reference to `pthread_key_create'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/libgcc.a(emutls.o): in function `__gthread_once.constprop.0.isra.0':
+emutls.c:(.text+0xf6): undefined reference to `pthread_once'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/libgcc.a(emutls.o): in function `__gthread_mutex_lock.constprop.0.isra.0':
+emutls.c:(.text+0x112): undefined reference to `pthread_mutex_lock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/libgcc.a(emutls.o): in function `__gthread_mutex_unlock.constprop.0.isra.0':
+emutls.c:(.text+0x12a): undefined reference to `pthread_mutex_unlock'
+/usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/../../../../arm-vita-eabi/bin/ld: /usr/local/vitasdk-softfp/bin/../lib/gcc/arm-vita-eabi/10.3.0/libgcc.a(emutls.o): in function `__gthread_setspecific.isra.0':
+emutls.c:(.text+0x132): undefined reference to `pthread_setspecific'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/love.dir/build.make:125: love] Error 1
+make[1]: *** [CMakeFiles/Makefile2:565: CMakeFiles/love.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2

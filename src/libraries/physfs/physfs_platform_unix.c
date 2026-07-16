@@ -60,7 +60,7 @@
 
 #include "physfs_internal.h"
 
-int __PHYSFS_platformInit(void)
+int __PHYSFS_platformInit(const char *argv0)
 {
     return 1;  /* always succeed. */
 } /* __PHYSFS_platformInit */
@@ -278,8 +278,8 @@ char *__PHYSFS_platformCalcBaseDir(const char *argv0)
             /* older kernels don't have /proc/self ... try PID version... */
             const unsigned long long pid = (unsigned long long) getpid();
             char path[64];
-            const int rc = (int) snprintf(path,sizeof(path),"/proc/%llu/exe",pid);
-            if ( (rc > 0) && (rc < sizeof(path)) )
+            const int rc = snprintf(path,sizeof(path),"/proc/%llu/exe",pid);
+            if ( (rc > 0) && (rc < (int)sizeof(path)) )
                 retval = readSymLink(path);
         } /* if */
     } /* if */
