@@ -460,7 +460,7 @@ void OpenGL::initOpenGLFunctions()
 
 void OpenGL::initMaxValues()
 {
-	if (GLAD_ES_VERSION_2_0 && !GLAD_ES_VERSION_3_0)
+	if (GLAD_ES_VERSION_2_0 && !GLAD_ES_VERSION_3_0 && !LOVE_VITA)
 	{
 		GLint range = 0;
 		GLint precision = 0;

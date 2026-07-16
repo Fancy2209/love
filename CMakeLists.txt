@@ -27,12 +27,24 @@ cmake_minimum_required(VERSION 3.1)
 
 project(love)
 
+if(VITA)
+	include("${VITASDK}/share/vita.cmake" REQUIRED)
+	set(VITA_APP_NAME "Love2D")
+	set(VITA_TITLEID "LOVE00002")
+	set(VITA_VPKNAME "love2d")
+	set(VITA_VERSION "01.00")
+	set(VITA_MKSFOEX_FLAGS "-d ATTRIBUTE2=12")
+endif()
+
 set(LOVE_EXE_NAME love)
 set(LOVE_LIB_NAME liblove)
 
 set(CMAKE_MODULE_PATH "${love_SOURCE_DIR}/extra/cmake" ${CMAKE_MODULE_PATH})
 # Needed for shared libs on Linux. (-fPIC).
-set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
+
+if(!VITA)
+	set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
+endif()
 
 set (CMAKE_CXX_STANDARD 11)
 
@@ -83,7 +95,7 @@ if(POLICY CMP0063)
 	cmake_policy(SET CMP0063 NEW)
 endif()
 
-if(VITA)
+if(!VITA)
 	find_package(OpenGL)
 endif()
 
@@ -189,7 +201,7 @@ Please see https://github.com/love2d/megasource
 	find_package(Freetype REQUIRED)
 	find_package(ModPlug REQUIRED)
 	find_package(OpenAL REQUIRED)
-	if(VITA)
+	if(!VITA)
 		find_package(OpenGL)
 	endif()
 	find_package(SDL2 REQUIRED CONFIG COMPONENTS SDL2main)
@@ -217,7 +229,7 @@ Please see https://github.com/love2d/megasource
 			-Wl,--whole-archive pthread -Wl,--no-whole-archive
 			vitaGL
 			vitashark
-			SceShaccCgExt
+			#SceShaccCgExt # Refusing to link for some reason, vendored instead
 			taihen_stub
 			SceShaccCg_stub
 			stdc++
@@ -1891,9 +1903,33 @@ endif()
 #
 # love (executable)
 #
+if(!VITA)
 add_executable(${LOVE_EXE_NAME} WIN32 src/love.cpp ${LOVE_RC})
+else()
+add_executable(${LOVE_EXE_NAME} WIN32 src/love.cpp
+		src/libraries/SceShaccCgExt/shacccg_ext_oop.cpp
+		src/libraries/SceShaccCgExt/shacccg_ext.c
+		src/libraries/SceShaccCgExt/sce_intrinsics.h
+		src/libraries/SceShaccCgExt/shacccg_ext.h
+		${LOVE_RC}
+)
+endif()
 target_link_libraries(${LOVE_EXE_NAME} ${LOVE_LIB_NAME})
 set_target_properties(${LOVE_EXE_NAME} PROPERTIES C_VISIBILITY_PRESET hidden CXX_VISIBILITY_PRESET hidden VISIBILITY_INLINES_HIDDEN ON)
+
+if(VITA)
+	vita_create_self(eboot.bin ${CMAKE_PROJECT_NAME} UNSAFE NOASLR)
+	vita_create_vpk(${VITA_VPKNAME}.vpk ${VITA_TITLEID} eboot.bin
+					VERSION ${VITA_VERSION}
+					NAME ${VITA_APP_NAME}
+					FILE 
+					${CMAKE_SOURCE_DIR}/livearea/icon0.png sce_sys/icon0.png
+					${CMAKE_SOURCE_DIR}/livearea/pic0.png sce_sys/pic0.png
+					${CMAKE_SOURCE_DIR}/livearea/startup.png sce_sys/livearea/contents/startup.png
+					${CMAKE_SOURCE_DIR}/livearea/bg0.png sce_sys/livearea/contents/bg0.png
+					${CMAKE_SOURCE_DIR}/livearea/template.xml sce_sys/livearea/contents/template.xml
+	)
+endif()
 
 if(MSVC OR MINGW)
 	add_executable(${LOVE_CONSOLE_EXE_NAME} src/love.cpp ${LOVE_RC})

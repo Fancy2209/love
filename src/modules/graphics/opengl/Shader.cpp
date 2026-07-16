@@ -221,6 +221,7 @@ void Shader::mapActiveUniforms()
 				if (location == -1)
 					continue;
 
+#ifndef LOVE_VITA // Shaders can't have default values on Vita
 				switch (u.baseType)
 				{
 				case UNIFORM_FLOAT:
@@ -243,6 +244,7 @@ void Shader::mapActiveUniforms()
 				default:
 					break;
 				}
+#endif
 			}
 		}
 
