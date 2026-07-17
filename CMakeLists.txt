@@ -1906,6 +1906,8 @@ endif()
 if(!VITA)
 add_executable(${LOVE_EXE_NAME} WIN32 src/love.cpp ${LOVE_RC})
 else()
+set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} -std=gnu11 -Wno-error=implicit-function-declaration -Wno-error=int-conversion -Wno-error=incompatible-pointer-types)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=gnu++11 -Wno-error=implicit-function-declaration -Wno-error=int-conversion -Wno-error=incompatible-pointer-types)
 add_executable(${LOVE_EXE_NAME} WIN32 src/love.cpp
 		src/libraries/SceShaccCgExt/shacccg_ext_oop.cpp
 		src/libraries/SceShaccCgExt/shacccg_ext.c
