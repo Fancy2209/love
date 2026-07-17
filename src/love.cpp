@@ -23,6 +23,12 @@
 #include "modules/love/love.h"
 #include <SDL.h>
 
+#ifdef LOVE_VITA
+int _newlib_heap_size_user = 192 * 1024 * 1024;
+int sceUserMainThreadStackSize = 8 * 1024 * 1024;
+#include <vitaGL.h>
+#endif
+
 #ifdef LOVE_BUILD_EXE
 
 // Lua
@@ -263,6 +269,22 @@ static DoneAction runlove(int argc, char **argv, int &retval)
 
 int main(int argc, char **argv)
 {
+#ifdef LOVE_VITA
+	vglSetSemanticBindingMode(VGL_MODE_POSTPONED);
+	vglUseCachedMem(false);
+	vglUseTripleBuffering(false);
+	vglSetParamBufferSize(4 * 1024 * 1024);
+	vglInitWithCustomThreshold(
+		0,
+		960,
+		544,
+		4 * 1024 * 1024,
+		0,
+		0,
+		0,
+		SCE_GXM_MULTISAMPLE_NONE
+	);
+#endif
 	if (strcmp(LOVE_VERSION_STRING, love_version()) != 0)
 	{
 		printf("Version mismatch detected!\nLOVE binary is version %s\n"

@@ -43,7 +43,7 @@ public:
 
 	void setGraphics(graphics::Graphics *graphics) override;
 
-	bool setWindow(int width = 800, int height = 600, WindowSettings *settings = nullptr) override;
+	bool setWindow(int width = 960, int height = 544, WindowSettings *settings = nullptr) override;
 	void getWindow(int &width, int &height, WindowSettings &settings) override;
 
 	void close() override;
@@ -154,10 +154,10 @@ private:
 
 	std::string title;
 
-	int windowWidth  = 800;
-	int windowHeight = 600;
-	int pixelWidth   = 800;
-	int pixelHeight  = 600;
+	int windowWidth  = 960;
+	int windowHeight = 544;
+	int pixelWidth   = 960;
+	int pixelHeight  = 544;
 	WindowSettings settings;
 	StrongRef<love::image::ImageData> icon;
 
