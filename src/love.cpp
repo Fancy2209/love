@@ -273,7 +273,7 @@ int main(int argc, char **argv)
 	vglSetSemanticBindingMode(VGL_MODE_POSTPONED);
 	vglUseCachedMem(false);
 	vglUseTripleBuffering(false);
-	vglSetParamBufferSize(4 * 1024 * 1024);
+	vglSetParamBufferSize(12 * 1024 * 1024);
 	vglInitWithCustomThreshold(
 		0,
 		960,
