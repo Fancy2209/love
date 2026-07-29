@@ -36,10 +36,10 @@ jobs:
         cd vitaGL
         make LOG_ERRORS=1 install -j$(nproc)
 
-    - name: Install vitaGL
+    - name: Instal SDL
       run: |
         git clone --depth=1 https://github.com/Northfear/SDL/ && cd SDL
-        cmake -S. -Bbuild -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_TOOLCHAIN_FILE=${VITASDK}/share/vita.toolchain.cmake -DCMAKE_BUILD_TYPE=Release -DVIDEO_VITA_VGL=ON -G Ninja
+        cmake -S. -Bbuild -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_TOOLCHAIN_FILE=${VITASDK}/share/vita.toolchain.cmake -DCMAKE_BUILD_TYPE=Release -DVIDEO_VITA_VGL=ON
         cmake --build build --parallel $(nproc)
         cmake --install build
 
