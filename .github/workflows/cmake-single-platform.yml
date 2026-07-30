@@ -34,7 +34,7 @@ jobs:
         cd ..
         git clone --depth=1 https://github.com/Rinnegatamante/vitaGL
         cd vitaGL
-        make LOG_ERRORS=1 install -j$(nproc)
+        make LOG_ERRORS=1 SOFTFP_ABI=1 USE_SCRATCH_MEMORY=1 HAVE_WRAPPED_ALLOCATORS=1 install -j$(nproc)
 
     - name: Instal SDL
       run: |

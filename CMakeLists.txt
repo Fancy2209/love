@@ -34,6 +34,10 @@ if(VITA)
 	set(VITA_VPKNAME "love2d")
 	set(VITA_VERSION "01.00")
 	set(VITA_MKSFOEX_FLAGS "-d ATTRIBUTE2=12")
+
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wl,-q,--wrap,memcpy,--wrap,memset,--wrap,malloc,--wrap,memalign,--wrap,free,--wrap,calloc,--wrap,realloc")
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wl,-q,--wrap,memcpy,--wrap,memset,--wrap,malloc,--wrap,memalign,--wrap,free,--wrap,calloc,--wrap,realloc")
+
 endif()
 
 set(LOVE_EXE_NAME love)

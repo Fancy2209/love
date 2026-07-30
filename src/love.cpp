@@ -24,9 +24,21 @@
 #include <SDL.h>
 
 #ifdef LOVE_VITA
-int _newlib_heap_size_user = 192 * 1024 * 1024;
-int sceUserMainThreadStackSize = 8 * 1024 * 1024;
+int _newlib_heap_size_user = 100 * 1024 * 1024;
+int sceUserMainThreadStackSize = 1 * 1024 * 1024;
+
+#include <vitasdk.h>
 #include <vitaGL.h>
+
+extern "C" {
+    void *__wrap_calloc(uint32_t nmember, uint32_t size) { return vglCalloc(nmember, size); }
+    void __wrap_free(void *addr) { vglFree(addr); };
+    void *__wrap_malloc(uint32_t size) { return vglMalloc(size); };
+    void *__wrap_memalign(uint32_t alignment, uint32_t size) { return vglMemalign(alignment, size); };
+    void *__wrap_realloc(void *ptr, uint32_t size) { return vglRealloc(ptr, size); };
+    void *__wrap_memcpy (void *dst, const void *src, size_t num) { return sceClibMemcpy(dst, src, num); };
+    void *__wrap_memset (void *ptr, int value, size_t num) { return sceClibMemset(ptr, value, num); };
+};
 #endif
 
 #ifdef LOVE_BUILD_EXE
@@ -270,15 +282,20 @@ static DoneAction runlove(int argc, char **argv, int &retval)
 int main(int argc, char **argv)
 {
 #ifdef LOVE_VITA
+	scePowerSetArmClockFrequency(444);
+	scePowerSetBusClockFrequency(222);
+	scePowerSetGpuClockFrequency(222);
+	scePowerSetGpuXbarClockFrequency(166);
+
 	vglSetSemanticBindingMode(VGL_MODE_POSTPONED);
 	vglUseCachedMem(false);
 	vglUseTripleBuffering(false);
-	vglSetParamBufferSize(12 * 1024 * 1024);
+	vglSetParamBufferSize(6 * 1024 * 1024);
 	vglInitWithCustomThreshold(
 		0,
 		960,
 		544,
-		4 * 1024 * 1024,
+		(_newlib_heap_size_user+10) * 1024 * 1024,
 		0,
 		0,
 		0,
